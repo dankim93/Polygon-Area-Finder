@@ -1,3 +1,17 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
 .App {
   text-align: center;
 }
@@ -21,4 +35,42 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+ul, li, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Pangolin', cursive;
+}
+
+button {
+  background-color: deepskyblue;
+  margin-top: 15px;
+  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 3px;
+  font-family: 'Pangolin', cursive;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+input {
+  padding: 10px;
+  font-size: 13px;
+  font-family: 'Pangolin', cursive;
 }

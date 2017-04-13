@@ -5,8 +5,8 @@ class InputCoordinate extends Component {
     super(props);
 
     this.state = {
-      x: 0,
-      y: 0
+      x: "",
+      y: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -30,15 +30,17 @@ class InputCoordinate extends Component {
   render() {
     return (
       <div className="InputCoordinate">
-        <input
+        <input className='input'
           type="text"
           name="x"
           value={ this.state.x }
+          placeholder="x coord"
           onChange={ this.handleChange } />
-        <input
+        <input className='input'
           type="text"
           name="y"
           value={ this.state.y }
+          placeholder="y coord"
           onChange={ this.handleChange } />
         <button onClick={ this.handleSubmit }>Add</button>
       </div>

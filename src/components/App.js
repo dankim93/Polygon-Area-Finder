@@ -47,6 +47,12 @@ class App extends Component {
     }
   }
 
+  // polygon() {
+  //   return (
+  //     <canvas
+  //   )
+  // }
+
   render() {
     let areaDiv = <div></div>
     if (this.state.area === 0) {
@@ -56,8 +62,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h2>Add Coordinates:</h2>
-        <h5>Add coordinates starting from top left and continuing clockwise</h5>
+        <h1>Polygon Area Finder</h1>
+        <h4>Add coordinates starting from top left and continuing clockwise</h4>
         <InputCoordinate onSubmit={ this.addCoordinate } />
         <ul className="coordinates">
           { this.displayCoordinates() }
