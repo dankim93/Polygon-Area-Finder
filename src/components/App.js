@@ -47,11 +47,24 @@ class App extends Component {
     }
   }
 
-  // polygon() {
-  //   return (
-  //     <canvas
-  //   )
-  // }
+  draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var first = this.state.coordinates[0];
+    if (first) {
+      ctx.beginPath();
+      ctx.moveTo(parseInt(first.x), parseInt(first.y));
+      this.state.coordinates.slice(1).forEach((coord) => {
+        ctx.lineTo(parseInt(coord.x), parseInt(coord.y));
+      })
+      // ctx.lineTo(parseInt(first.x), parseInt(first.y));
+      ctx.closePath();
+      ctx.stroke();
+      ctx.fill();
+    }
+  }
+}
 
   render() {
     let areaDiv = <div></div>
@@ -70,6 +83,7 @@ class App extends Component {
         </ul>
         <button onClick={this.findArea}>Find Area</button>
         {areaDiv}
+        {this.draw()}
       </div>
     );
   }
