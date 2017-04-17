@@ -51,8 +51,12 @@ ul, li, button {
   background: transparent;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, div {
   font-family: 'Pangolin', cursive;
+}
+
+div.answer {
+  color: LightGreen;
 }
 
 button {
@@ -74,4 +78,10 @@ input {
   font-size: 13px;
   font-family: 'Pangolin', cursive;
   padding: 10px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
 }

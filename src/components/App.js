@@ -69,9 +69,9 @@ class App extends Component {
   render() {
     let areaDiv = <div></div>
     if (this.state.area === 0) {
-      areaDiv = <div></div>
+      areaDiv = <div className="answer"></div>
     } else {
-      areaDiv = <div>The Area of the Polygon is {this.state.area}</div>
+      areaDiv = <div className="answer">The Area of the Polygon is {this.state.area}</div>
     }
     return (
       <div className="App">
