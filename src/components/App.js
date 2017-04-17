@@ -36,6 +36,22 @@ class App extends Component {
   findArea() {
     let area = 0;
     let coord = this.state.coordinates;
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext('2d');
+      var first = this.state.coordinates[0];
+      if (first) {
+        ctx.beginPath();
+        ctx.moveTo(parseInt(first.x), parseInt(first.y));
+        this.state.coordinates.slice(1).forEach((coord) => {
+          ctx.lineTo(parseInt(coord.x), parseInt(coord.y));
+        })
+        // ctx.lineTo(parseInt(first.x), parseInt(first.y));
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+      }
+    }
 
     if (coord.length > 2) {
       for (let i = 0; i < this.state.coordinates.length - 1; i++) {
@@ -48,23 +64,8 @@ class App extends Component {
   }
 
   draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    var first = this.state.coordinates[0];
-    if (first) {
-      ctx.beginPath();
-      ctx.moveTo(parseInt(first.x), parseInt(first.y));
-      this.state.coordinates.slice(1).forEach((coord) => {
-        ctx.lineTo(parseInt(coord.x), parseInt(coord.y));
-      })
-      // ctx.lineTo(parseInt(first.x), parseInt(first.y));
-      ctx.closePath();
-      ctx.stroke();
-      ctx.fill();
-    }
+
   }
-}
 
   render() {
     let areaDiv = <div></div>

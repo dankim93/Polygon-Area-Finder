@@ -85,3 +85,8 @@ canvas {
   margin: auto;
   margin-top: 20px;
 }
+
+.pixel {
+  display: flex;
+  justify-content: center;
+}
